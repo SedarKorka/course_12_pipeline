@@ -16,14 +16,14 @@ import os
 
 # Load the dataset
 # Define the URL of the edge list file for the Facebook-Ego network
-url_facebook = os.getenv('FACEBOOK_URL') or input('Enter the Facebook URL: ')
+url_facebook = os.getenv('FACEBOOK_URL')  
 # Download the Facebook-Ego network file
 urllib.request.urlretrieve(url_facebook, "facebook.edges")
 # Load the Facebook-Ego network (undirected graph)
 facebook_network = nx.read_edgelist("facebook.edges", nodetype=int)
 
 # Define the URL of the edge list file for the Twitter-Ego network
-url_twitter = os.getenv('TWITTER_URL') or input('Enter the Twitter URL: ')
+url_twitter = os.getenv('TWITTER_URL')  
 # Download the Twitter-Ego network file
 urllib.request.urlretrieve(url_twitter, "twitter.edges")
 # Load the Twitter-Ego network (directed graph)
