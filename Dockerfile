@@ -16,7 +16,7 @@
 
 #CMD mv /home/housing/pipeline_output/* /home/housing/shared_folder/
 
-FROM python:3.10.12 
+FROM python:3.10.12
 
 WORKDIR /home/housing
 
@@ -27,5 +27,8 @@ COPY requirements.txt /home/housing/requirements.txt
 ENV FACEBOOK_URL=""
 ENV TWITTER_URL=""
 
-CMD ["python", "-u", "my_script.py"]
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+CMD ["python", "-u", "my_script.py"] 
 
