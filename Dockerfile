@@ -5,14 +5,10 @@ RUN mkdir /home/housing
 RUN mkdir /home/housing/pipeline_output
 
 RUN mkdir /home/housing/shared_folder
+ 
+COPY my_script.py /home/housing/my_script.py
 
-COPY renv.lock /home/housing/renv.lock
-
-COPY functions /home/housing/functions
-
-COPY analyse_data.Rmd /home/housing/analyse_data.Rmd
-
-COPY _targets.R /home/housing/_targets.R
+#COPY requirements.txt /home/housing/requirements.txt  # Add this line to copy your requirements.txt file
 
 RUN R -e "setwd('/home/housing');renv::init();renv::restore()"
 
