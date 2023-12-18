@@ -19,10 +19,11 @@
 FROM python:3.10.12
 
 WORKDIR /home/housing
+
+COPY requirements.txt /home/housing/requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY my_script.py /home/housing/my_script.py
-COPY requirements.txt /home/housing/requirements.txt
 
 # Set environment variables 
 ENV FACEBOOK_URL="https://raw.githubusercontent.com/wang422003/Complex-Networks_exercise/main/Datasets/Group3/Facebook-Ego/348.edges"
