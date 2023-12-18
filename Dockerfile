@@ -19,16 +19,15 @@
 FROM python:3.10.12
 
 WORKDIR /home/housing
+RUN pip install --no-cache-dir -r requirements.txt
 
 COPY my_script.py /home/housing/my_script.py
 COPY requirements.txt /home/housing/requirements.txt
 
-# Set environment variables (you can modify these or provide them during runtime)
-ENV FACEBOOK_URL=""
-ENV TWITTER_URL=""
+# Set environment variables 
+ENV FACEBOOK_URL="https://raw.githubusercontent.com/wang422003/Complex-Networks_exercise/main/Datasets/Group3/Facebook-Ego/348.edges"
+ENV TWITTER_URL="https://raw.githubusercontent.com/wang422003/Complex-Networks_exercise/main/Datasets/Group3/Twitter-Ego/789071.edges"
 
-
-RUN pip install --no-cache-dir -r requirements.txt
 
 CMD ["python", "-u", "my_script.py"] 
 
