@@ -6,16 +6,16 @@ import matplotlib.pyplot as plt
 
 #Load the dataset
 # Define the URL of the edge list file for the Facebook-Ego network
-url_facebook = input('Enter the facebook url\n')
-#facebook_url = "https://raw.githubusercontent.com/wang422003/Complex-Networks_exercise/main/Datasets/Group3/Facebook-Ego/348.edges"
+#url_facebook = input('Enter the facebook url\n')
+url_facebook = "https://raw.githubusercontent.com/wang422003/Complex-Networks_exercise/main/Datasets/Group3/Facebook-Ego/348.edges"
 # Download the Facebook-Ego network file
 urllib.request.urlretrieve(url_facebook, "facebook.edges")
 # Load the Facebook-Ego network (undirect graph)
 facebook_network = nx.read_edgelist("facebook.edges", nodetype=int)
 
 # Define the URL of the edge list file for the Twitter-Ego network
-url_twitter = input('Enter the twitter url\n')
-#twitter_url = "https://raw.githubusercontent.com/wang422003/Complex-Networks_exercise/main/Datasets/Group3/Twitter-Ego/789071.edges"
+#url_twitter = input('Enter the twitter url\n')
+url_twitter = "https://raw.githubusercontent.com/wang422003/Complex-Networks_exercise/main/Datasets/Group3/Twitter-Ego/789071.edges"
 # Download the Twitter-Ego network file
 urllib.request.urlretrieve(url_twitter, "twitter.edges")
 # Load the Twitter-Ego network (direct graph)
