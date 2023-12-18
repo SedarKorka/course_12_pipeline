@@ -1,24 +1,32 @@
 # import the modules
 import urllib.request
 import networkx as nx
-import numpy as np
+import numpy as np 
 import matplotlib.pyplot as plt
+import os
 
 #Load the dataset
 # Define the URL of the edge list file for the Facebook-Ego network
 #url_facebook = input('Enter the facebook url\n')
-url_facebook = "https://raw.githubusercontent.com/wang422003/Complex-Networks_exercise/main/Datasets/Group3/Facebook-Ego/348.edges"
+#facebook_url = "https://raw.githubusercontent.com/wang422003/Complex-Networks_exercise/main/Datasets/Group3/Facebook-Ego/348.edges"
+ 
+#twitter_url = "https://raw.githubusercontent.com/wang422003/Complex-Networks_exercise/main/Datasets/Group3/Twitter-Ego/789071.edges"
+
+
+
+# Load the dataset
+# Define the URL of the edge list file for the Facebook-Ego network
+url_facebook = os.getenv('FACEBOOK_URL') or input('Enter the Facebook URL: ')
 # Download the Facebook-Ego network file
 urllib.request.urlretrieve(url_facebook, "facebook.edges")
-# Load the Facebook-Ego network (undirect graph)
+# Load the Facebook-Ego network (undirected graph)
 facebook_network = nx.read_edgelist("facebook.edges", nodetype=int)
 
 # Define the URL of the edge list file for the Twitter-Ego network
-#url_twitter = input('Enter the twitter url\n')
-url_twitter = "https://raw.githubusercontent.com/wang422003/Complex-Networks_exercise/main/Datasets/Group3/Twitter-Ego/789071.edges"
+url_twitter = os.getenv('TWITTER_URL') or input('Enter the Twitter URL: ')
 # Download the Twitter-Ego network file
 urllib.request.urlretrieve(url_twitter, "twitter.edges")
-# Load the Twitter-Ego network (direct graph)
+# Load the Twitter-Ego network (directed graph)
 twitter_network = nx.read_edgelist("twitter.edges", nodetype=int, create_using=nx.DiGraph())
 
 
