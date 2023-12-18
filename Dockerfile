@@ -14,4 +14,4 @@ COPY requirements.txt /home/housing/requirements.txt
 
 CMD ["my_script.py", "-flag"]
 
-CMD mv /home/housing/pipeline_output/* /home/housing/shared_folder/
+#CMD mv /home/housing/pipeline_output/* /home/housing/shared_folder/
