@@ -21,7 +21,7 @@ on your machine)
 docker run --rm --name housing_container -v  /absolute/path/:/home/network/output:rw  pipeline  
 ```
 
-When it will work correctly , you should find the output in `output.txt` 
+When it will work correctly , you should find the output in `output.txt` , in the /absolute/path/
 
 ## Requirements
 
