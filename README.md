@@ -1,8 +1,32 @@
-# course_12_pipeline
+# Pipe line to calculale the number of edges and nodes for facebook and twitter network
 
-# Running a targets pipeline with a dockerized environment
+## How to run this pipeline
 
-Pushing to this repo runs a reproducibly analytical pipeline. 
-This is for Chapter 15 of my book: https://raps-with-r.dev/ci_cd.html
+- Clone the repository:
 
-This repo uses the Docker image from this repo: https://github.com/b-rodrigues/ga_demo
+```
+git@github.com:SedarKorka/course_12_pipeline.git
+```
+
+- Build the image (run this command in the same folder where you cloned the repo):
+
+```
+docker build -t pipeline .
+```
+
+- You can now run the pipeline with the following command (change `/absolute/path/` to the path
+on your machine)
+- Example 
+```
+docker run --rm --name housing_container -v  /absolute/path/:/home/network/output:rw  pipeline  
+```
+
+When it will work correctly , you should the output folder with `output/` folder.
+
+## Requirements
+
+You need to have Docker installed, and also python 3.10
+
+## Github Actions
+
+
