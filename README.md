@@ -27,6 +27,6 @@ When it will work correctly , you should the output folder with `output/` folder
 
 You need to have Docker installed, and also python 3.10
 
-## Github Actions
-
+## Actions
+- You can also change the url of the networks in Docker file
 

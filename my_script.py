@@ -42,7 +42,7 @@ f.write("For Facebook-Ego Network: \n")
 f.write("The number of nodes is : %d \n" %facebook_num_nodes) 
 f.write("The number of edges is : %d \n" %facebook_num_edges)
 
-f.write("For Twitter-Ego Network::")
+f.write("For Twitter-Ego Network: \n")
 f.write("The number of nodes is : %d \n" %twitter_num_nodes) 
 f.write("The number of edges is : %d \n" %twitter_num_edges)
 f.close()
