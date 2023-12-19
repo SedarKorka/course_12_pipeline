@@ -37,7 +37,7 @@ twitter_num_edges = len(twitter_network.edges())
 # Print the results for Facebook-Ego network
  
 print("Data save in the output.txt file")
-f = open("/home/newwork/output.txt", "w")
+f = open("/home/network/output/output.txt", "w")
 f.write("For Facebook-Ego Network: \n")
 f.write("The number of nodes is : %d \n" %facebook_num_nodes) 
 f.write("The number of edges is : %d \n" %facebook_num_edges)
