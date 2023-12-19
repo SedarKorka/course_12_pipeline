@@ -5,7 +5,7 @@
 - Clone the repository:
 
 ```
-git@github.com:SedarKorka/course_12_pipeline.git
+git @github.com:SedarKorka/course_12_pipeline.git
 ```
 
 - Build the image (run this command in the same folder where you cloned the repo):
